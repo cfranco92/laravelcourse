@@ -10,7 +10,11 @@
                     </div>
                     <div class="card-body">
                         <b>Product name:</b> {{ $data["product"]["name"] }} <br>
+                    @if ($data["product"]["price"] <= 200)
                         <b>Product price:</b> {{ $data["product"]["price"] }} <br><br>
+                    @else
+                        <b>Product price:</b> <b style="color: red;"> {{ $data["product"]["price"] }} </b> <br><br>
+                    @endif
                         <b>This product is available in the next sizes:</b> <br>
                         <ul>
                             @foreach ($data["sizes"] as $s)
