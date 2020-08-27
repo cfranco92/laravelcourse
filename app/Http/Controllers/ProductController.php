@@ -35,7 +35,9 @@ class ProductController extends Controller
             "name" => "required",
             "price" => ['required', 'gt:0']
         ]);
-        dd($$request->all());
+        
+        // dd($$request->all());
+        return view('product.created');
         // Here goes the code to call the model and save it to the database
     }
 }
