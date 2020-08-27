@@ -32,6 +32,7 @@
                         <!-- Future authentication Links -->
                         <div class="links">
                             <a href="product/show/121">Product</a>
+                            <a href="product/create">Create</a>
                         </div>
                     </ul>
                     <!-- Right Side Of Navbar -->
