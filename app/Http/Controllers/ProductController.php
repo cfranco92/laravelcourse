@@ -33,7 +33,7 @@ class ProductController extends Controller
     public function save(Request $request) {
         $request->validate([
             "name" => "required",
-            "price" => "required"
+            "price" => ['required', 'gt:0']
         ]);
         dd($$request->all());
         // Here goes the code to call the model and save it to the database
