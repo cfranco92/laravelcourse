@@ -30,22 +30,26 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <!-- Future authentication Links -->
-                        <div class="links">
-                            <a href="product/show/121">Product</a>
-                            <a href="product/create">Create</a>
-                        </div>
+                        <ul>
+                            <a href="{{ route('product.show',['id'=>'121']) }}">Product</a>
+                            <a href=" {{ route('product.create') }}">Create</a>
+                        </ul>
                     </ul>
+
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-
+                        
                     </ul>
                 </div>
             </div>
         </nav>
+
         <main class="py-4">
             @yield('content')
         </main>
     </div>
 </body> 
-<!-- Scripts --> 
+
+<!-- Scripts -->
+
 </html> 

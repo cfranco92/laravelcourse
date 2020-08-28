@@ -13,14 +13,24 @@ class ProductController extends Controller
         $listProducts[121] = array("name"=>"Tv samsung", "price"=>"1000");
         $listOfSizes = array("XS", "S", "M", "L", "XL");
 
-        if (!empty($listProducts[$id])) {
-            $data["title"] = $listProducts[$id]["name"];
-            $data["product"] = $listProducts[$id];
-            $data["sizes"] = $listOfSizes;
-            return view('product.show')->with("data", $data);   
-        } else {
+        // if (!empty($listProducts[$id])) {
+        //     $data["title"] = $listProducts[$id]["name"];
+        //     $data["product"] = $listProducts[$id];
+        //     $data["sizes"] = $listOfSizes;
+        //     return view('product.show')->with("data", $data);   
+        // } else {
+        //     return redirect()->route('home.index');
+        // }
+
+        if ( !array_key_exists($id, $listProducts)) {
             return redirect()->route('home.index');
         }
+
+        $data["title"] = $listProducts[$id]["name"];
+        $data["product"] = $listProducts[$id];
+        $data["sizes"] = $listOfSizes;
+        
+        return view('product.show')->with("data", $data);   
     }
 
     public function create() {
