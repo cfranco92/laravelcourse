@@ -28,4 +28,13 @@
             </div>
         </div>
     </div>
+    <div class="row p-5">
+        <div class="col-md-12">
+            <ul id="errors">
+                @foreach($data["products"] as $product)
+                    <li>{{ $product->getId() }} - {{ $product->getName() }} : {{ $product->getPrice() }}</li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
 @endsection

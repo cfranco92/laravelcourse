@@ -21,10 +21,11 @@ class ProductController extends Controller
 
 
     public function create() {
-        $data = []; // To be sent to the view
+        $data = []; //to be sent to the view
         $data["title"] = "Create product";
+        $data["products"] = Product::all();
 
-        return view('product.create')->with("data", $data);
+        return view('product.create')->with("data",$data);
     }
 
     public function save(Request $request) {
