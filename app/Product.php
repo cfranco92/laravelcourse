@@ -33,4 +33,9 @@ class Product extends Model
     public function setPrice($price) {
         $this->attributes['price'] = $price;
     }
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
+
 }
