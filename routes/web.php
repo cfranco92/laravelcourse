@@ -28,3 +28,6 @@ Route::post('/product/save', 'ProductController@save')->name("product.save");
 
 Route::get('/image/index', 'ImageController@index')->name("image.index");
 Route::post('/image/save', 'ImageController@save')->name("image.save");
+
+Route::get('/image-not-di/index', 'ImageNotDIController@index')->name("imagenotdi.index");
+Route::post('/image-not-di/save', 'ImageNotDIController@save')->name("imagenotdi.save");
