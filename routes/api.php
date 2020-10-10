@@ -23,3 +23,6 @@ Route::get('/products/{id}', 'Api\ProductApi@show')->name("api.product.show");
 
 Route::get('/v2/products', 'Api\ProductApiV2@index')->name("api.v2.product.index");
 Route::get('/v2/products/{id}', 'Api\ProductApiV2@show')->name("api.v2.product.show");
+
+Route::get('/v3/products', 'Api\ProductApiV3@index')->name("api.v3.product.index");
+Route::get('/v3/products/paginate', 'Api\ProductApiV3@paginate')->name("api.v3.product.paginate");
