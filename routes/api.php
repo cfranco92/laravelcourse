@@ -20,3 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/products', 'Api\ProductApi@index')->name("api.product.index");
 Route::get('/products/{id}', 'Api\ProductApi@show')->name("api.product.show");
+
+Route::get('/v2/products', 'Api\ProductApiV2@index')->name("api.v2.product.index");
+Route::get('/v2/products/{id}', 'Api\ProductApiV2@show')->name("api.v2.product.show");
