@@ -16,4 +16,14 @@ class ProductApi extends Controller
     {
         return Product::findOrFail($id);
     }
+
+    public function save(Request $request) {
+        $request->validate([
+            "name" => "required",
+            "price" => "required|numeric|gt:0"
+        ]);
+        Product::create($request->only(["name","price"]));
+
+        // return back()->with('success','Item created successfully!');
+    }
 }

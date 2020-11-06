@@ -26,3 +26,5 @@ Route::get('/v2/products/{id}', 'Api\ProductApiV2@show')->name("api.v2.product.s
 
 Route::get('/v3/products', 'Api\ProductApiV3@index')->name("api.v3.product.index");
 Route::get('/v3/products/paginate', 'Api\ProductApiV3@paginate')->name("api.v3.product.paginate");
+
+Route::post('/product/create', 'Api\ProductApi@save')->name("api.product.save");
